@@ -144,8 +144,7 @@ class PythonNET_BuildExt(build_ext):
 
             # Check if --enable-shared was set when Python was built
             enable_shared = get_config_var("Py_ENABLE_SHARED")
-            if enable_shared == 0:
-                defines.append("PYTHON_WITHOUT_ENABLE_SHARED")
+            defines.append("PYTHON_WITHOUT_ENABLE_SHARED")
 
         if hasattr(sys, "abiflags"):
             if "d" in sys.abiflags:
